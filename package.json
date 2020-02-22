@@ -4,8 +4,16 @@
   "description": "featheriochallenge",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "node_modules/.bin/jest --watch",
+    "start": "node index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
 }
