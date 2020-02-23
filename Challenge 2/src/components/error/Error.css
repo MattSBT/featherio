@@ -1,0 +1,15 @@
+.error {
+  margin-top: 10px;
+  color: red;
+  font-size: 10;
+  position: relative;
+  left: 130px;
+  font-weight: 350;
+  margin-left: 5px;
+}
+.error-pic {
+  margin-top: 10px;
+  width: 12px;
+  position: relative;
+  left: 130px;
+}

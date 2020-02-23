@@ -1,3 +1,25 @@
-node_modules
+Challenge 1/node_modules
+Challenge 2/node_modules
 *.test.js
 *.spec.js
+
+
+Challenge 2/.pnp
+.pnp.js
+
+# testing
+Challenge 2/coverage
+
+# production
+Challenge 2/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+Challenge 2/npm-debug.log*
+Challenge 2/yarn-debug.log*
+Challenge 2/yarn-error.log*
