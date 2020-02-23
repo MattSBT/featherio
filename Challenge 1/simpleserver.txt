@@ -1,0 +1,17 @@
+Simple Server Project
+    Software:
+        -Using Node for portability and ease of installation and set up
+        -Express for quick uptime on setting up routes
+    Functionality / Checklist:
+        -Create endpoint that accepts JSON request
+        -Create function that shifts string per the cypher number
+        -Make sure to check for base cases on shift cypher requirements
+        -User jest and supertests for testing
+        -Type check and check for null values
+        -Check corner cases for any type of unwanted functionality
+        -Make sure to send correct status (500 for no string and 200 for responding with cyphered message)
+        -Store cyphered message on disc and append to file.
+
+Node version v12.4.2
+
+Revision: Wound up using python for tests given the issues with supertests
