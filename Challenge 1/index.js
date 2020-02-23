@@ -5,7 +5,4 @@ const app = express();
 
 require("./routes/routes")(app);
 
-const PORT = 23456;
-
-app.listen(PORT);
-console.log("App Listening on " + PORT);
+module.exports = app;
