@@ -45,12 +45,8 @@ module.exports = app => {
     ) {
       res.status(500).send("");
     } else {
-      try {
-        let cypherMessage = createCypherMessage(message, shiftCypher);
-      } catch {
-        console.log("This message could not be cyphered");
-        res.status(500).send("");
-      }
+      let cypherMessage = createCypherMessage(message, shiftCypher);
+
       // Append to file on server
       fs.appendFile("cypherMessage.txt", cypherMessage, error => {
         if (error) throw error;

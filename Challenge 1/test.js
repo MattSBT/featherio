@@ -9,7 +9,7 @@ it("POSTS to /api/encode endpoint to check for failure response", async done => 
   });
 
   expect(response.status).toBe(500);
-  expect(response.body.message).toBe("");
+  expect(response.body.EncodedMessage).toBe("");
   done();
 });
 it("POSTS to api/encode endpoint testing encode non alpha", async done => {
@@ -17,6 +17,7 @@ it("POSTS to api/encode endpoint testing encode non alpha", async done => {
     Message: "dad",
     Shift: "2"
   });
-  expect(response.status).toBe(200);
-  expect(response.body.message).toBe("gdg");
+  expect(response.status).toBe(500);
+  expect(response.body.EncodedMessage).toBe("gdg");
+  done();
 });
