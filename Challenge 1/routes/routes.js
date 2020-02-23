@@ -2,14 +2,7 @@ const fs = require("fs");
 
 function shiftChar(char, shiftCypher, { alphaOnly = false } = {}) {
   // this will look to see if alphaOnly has been set to true if so the cypher will only be Alpha Chars
-  if (!alphaOnly) {
-    return String.fromCharCode(char.charCodeAt(0) + shiftCypher);
-  } else {
-    let currentChar = char.charCodeAt(0);
-    if (currentChar > 122 || currentChar < 65) {
-      currentChar = 65;
-    }
-  }
+  return String.fromCharCode(char.charCodeAt(0) + shiftCypher);
 }
 
 function createCypherMessage(message, cypher) {
@@ -48,7 +41,7 @@ module.exports = app => {
       let cypherMessage = createCypherMessage(message, shiftCypher);
 
       // Append to file on server
-      fs.appendFile("cypherMessage.txt", cypherMessage, error => {
+      fs.appendFile("cypherMessage.txt", cypherMessage + "\n", error => {
         if (error) throw error;
       });
       //Handle sending the correct headers and either cyphered message or blank string
