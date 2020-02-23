@@ -33,6 +33,11 @@ export default class Signup extends Component {
     document
       .getElementById("password")
       .addEventListener("blur", this.validatePassword);
+
+    //Checks to see if they change password after entering confirmation password
+    document
+      .getElementById("password")
+      .addEventListener("blur", this.matchPassword);
     document
       .getElementById("username")
       .addEventListener("blur", this.validateUsername);
@@ -153,7 +158,6 @@ export default class Signup extends Component {
               id="username"
               type="text"
               name="username"
-              onBlur={this.validateUsername}
               onChange={this.getInput}
             ></input>
 
@@ -167,7 +171,6 @@ export default class Signup extends Component {
               type="text"
               id="email"
               name="email"
-              onBlur={this.validateEmail}
               onChange={this.getInput}
             ></input>
 
@@ -181,7 +184,6 @@ export default class Signup extends Component {
               id="password"
               type="password"
               name="password"
-              onBlur={this.validatePassword}
               onChange={this.getInput}
             ></input>
 
@@ -197,7 +199,6 @@ export default class Signup extends Component {
               required
               type="password"
               name="confPassword"
-              onBlur={this.matchPassword}
               onChange={this.getInput}
             ></input>
 
@@ -205,7 +206,7 @@ export default class Signup extends Component {
           </div>
           <div className="field">
             <button
-              onFocus={this.matchPassword}
+              onFocus={this.checkAllFields}
               type="submit"
               disabled={this.state.isDisabled}
             >
