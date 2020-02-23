@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 function shiftChar(char, shiftCypher, { alphaOnly = false } = {}) {
-  // this will look to see if alphaOnly has been set to true if so the cypher will only be Alpha Chars
+  // TODO:this will look to see if alphaOnly has been set to true if so the cypher will only be Alpha Chars
   return String.fromCharCode(char.charCodeAt(0) + shiftCypher);
 }
 
