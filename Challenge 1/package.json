@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node_modules/.bin/jest",
     "test:watch": "node_modules/.bin/jest",
-    "start": "node index.js"
+    "start": "node start.js"
   },
   "author": "",
   "license": "ISC",
